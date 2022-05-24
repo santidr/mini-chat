@@ -36,7 +36,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js" integrity="sha512-9mpsATI0KClwt+xVZfbcf2lJ8IFBAwsubJ6mI3rtULwyM3fBmQFzj0It4tGqxLOGQwGfJdk/G+fANnxfq9/cew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const socket = io('http://localhost:8080')
+        const socket = io('https://sdr-mini-chat.herokuapp.com/')
 
         // DOM elements references
         const myForm = document.querySelector('#myForm')
@@ -60,15 +60,6 @@
                                 ? `<li class="bg-success bg-opacity-10 msg-bubble-right">${ data.msg }</li>`
                                 : `<li class="bg-primary bg-opacity-10">${ data.msg }</li>`
         })
-
-        // setTimeout(() => {
-
-        //     socket.emit('msg-client', {
-        //         name: 'Santiago',
-        //         msg: 'Hola desde el cliente, otra vez...'
-        //     })
-
-        // }, 4000)
     </script>
 </body>
 </html>
